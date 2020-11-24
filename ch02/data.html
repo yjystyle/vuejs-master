@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        <p> {{items}}</p>
+    </div>
+    <script>
+      var items = [
+        {
+          name: "연필",
+          price: 300,
+          quantity: 0,
+        },
+        {
+          name: "공책",
+          price: 400,
+          quantity: 0,
+        },
+        {
+          name: "지우개",
+          price: 500,
+          quantity: 0,
+        },
+      ];
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          items: items,
+        },
+      });
+    </script>
+  </body>
+</html>

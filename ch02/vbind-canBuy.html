@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <button id="b-button" v-bind:disabled="!canBuy">구매</button>
+    <script>
+      var vrm = new Vue({
+        el: "#b-button",
+        data: {
+            canBuy: false
+        },
+      });
+    </script>
+  </body>
+</html>
