@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="fruits-list">
+        <page-header>
+            <h1 slot="header">여름 과일</h1>
+        </page-header>
+        <ul>
+            <li>수박</li>
+            <li>망고</li>
+        </ul>
+    </div>
+    
+    <script>
+       var headerTemplate = `
+        <div style="color: gray;">
+            <slot name="heaer> # 부모 컴포넌트로부터 전달받은 것이 없으면 이 문장을 표시</slot>"
+        </div>
+        `
+
+        Vue.component({
+            template: headerTemplate
+        })
+
+        new Vue({
+            el: '#fruits-list'
+        })
+    </script>
+</body>
+</html>

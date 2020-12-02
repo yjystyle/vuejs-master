@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <item-desc v-bind:item-name="myItem"></item-desc>
+    </div> 
+    <script>
+        Vue.component('item-desc', {
+            props : {
+                // 부모로부터 전달받은 속성명
+                itemName : {
+                    type: String
+                }
+            },
+            template: '<p>{{itemName}}은 편리해</p>'
+        })
+        new Vue({
+            el: '#app',
+            data: {
+                myItem : 'pen'
+            }
+        })
+    </script>
+</body>
+</html>
